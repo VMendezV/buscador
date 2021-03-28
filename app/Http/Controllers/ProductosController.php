@@ -39,7 +39,15 @@ class ProductosController extends Controller
     {
         //
     }
+    //search
+    public function findProducts(Request $request)
+    {
+        $search=$request->query('query');
+        $productos = Productos::where('nombre','like','%'.$search.'%')->orWhere('descripcion','like','%'.$search.'%')->get();        
+        return view('buscar', ['productos'=>$productos]);
 
+//        return response()->json($productos);
+    }
     /**
      * Display the specified resource.
      *

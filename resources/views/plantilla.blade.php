@@ -54,9 +54,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h1><a href="index.html"><img src="{{asset('images/logo3.jpg')}}"></a></h1>
         </div>
         <div class="col-md-6 header-middle">
-            <form>
+            <form action="/busqueda" method="GET">
                 <div class="search">
-                    <input type="search" value="Buscar"  id="search"onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Buscar';}" required="">
+                    <input name="query" type="search" value="Buscar"  id="search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Buscar';}" required="">
                 </div>
               {{--   <div class="section_room">
                     <select id="country" onchange="change_country(this.value)" class="frm-field required">

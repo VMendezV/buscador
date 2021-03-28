@@ -29,8 +29,11 @@ Route::get('/nosotros', function () {
 Route::get('/mi-lista', function () {
     return view('milista');
 });
+Route::get('/busqueda', [ProductosController::class, 'findProducts']);
 
-
+Route::get('/verify-email', [EmailVerificationPromptController::class, '__invoke'])
+                ->middleware('auth')
+                ->name('verification.notice');
 Route::resource('/', ProductosController::class);
 Route::get('/dashboard', function () {
     return view('inicio2');
