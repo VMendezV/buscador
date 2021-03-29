@@ -3,7 +3,7 @@
 Inicio
 @endsection
 @section('contenido')
-<h1 class="sec__inicio__h1">Bienvenido {{ Auth::user()->name }}</h1>
+<h1 class="sec__inicio__h1">Bienvenidos {{ Auth::user()->name }}</h1>
 <div class=" flex items-center justify-center">
 
     <form id="form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST"
